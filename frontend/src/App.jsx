@@ -31,7 +31,6 @@ function App() {
 
   return (
     <>
-      <Provider store={Store} >
 
         <BrowserRouter>
           <Routes>
@@ -45,7 +44,7 @@ function App() {
           </Routes>
           </BrowserRouter>
 
-      </Provider>
+      
       {/* <AdminDashboard /> */}
     </>
   )

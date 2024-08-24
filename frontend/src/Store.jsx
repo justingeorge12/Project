@@ -1,11 +1,10 @@
+import { configureStore } from "@reduxjs/toolkit";
+import counterreducer from './redux/counterSlice'
 
-import {configureStore} from '@reduxjs/toolkit'
-
-const Store = configureStore({
-    reducer : {},
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware() ,
-    devTools : true
+const store = configureStore({
+    reducer : {
+        counter : counterreducer
+    }
 })
 
-
-export default Store
+export default store

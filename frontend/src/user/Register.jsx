@@ -40,6 +40,15 @@ function Register() {
         }
     }
 
+    function handleImgSub(e){
+        console.log(image, 'brrffff')
+        console.log(e.target.files)
+        setImage(e.target.files[0])
+        console.log(image, 'afttttttt')
+    }
+    
+    console.log(username,image)
+
     return(
         <div className="justify-center flex h-screen items-center">
             <div className="bg-zinc-800 h-[550px] w-[500px]">
@@ -48,7 +57,7 @@ function Register() {
                     <input onChange={(e) => setUsername(e.target.value)} type="text" placeholder="username" className="p-2 rounded  outline-red-300 "/><br />
                     <input onChange={(e) => setEmail(e.target.value)} type="gmail" placeholder="gmail" className="p-2 rounded outline-red-300" /><br />
                     <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="password" className="p-2 rounded outline-red-300" /><br />
-                    <input onChange={(e) => setImage(e.target.files[0])} type="file"  /><br />
+                    <input onChange={handleImgSub} type="file"  /><br />
                     <button type="submit" className="bg-red-500 p-2 rounded">Register</button>
                 </form>
                 <div className="grid m-5 text-white">
